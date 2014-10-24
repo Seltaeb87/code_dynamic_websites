@@ -1,4 +1,5 @@
 <?php
+
 	
 	// Constants
 	define('TITLE', 'Else');
@@ -7,6 +8,7 @@
 	$name = 'Bastiaan Bitter';
 	$date = date('Y');
 	$lesson_num = 11;
+	$test = 'This is a test commit from my PC.';
 
 	$fav_fruit = "pineapple";
 ?>
@@ -37,6 +39,8 @@
 					}else{
 						echo "Oh, you like Oranges..?!";
 					};
+
+					echo $test;
 
 				?>
 				

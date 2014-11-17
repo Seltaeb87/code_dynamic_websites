@@ -48,24 +48,40 @@
 				<h3>Or <code>or</code></h3>
 				<?php
 					
-					if ($cartTotal > 15 || $couponCode == 'DiscountPlease') {
+					if ($cartTotal > 20 || $couponCode == 'DiscountNow') {
 						echo '<p>You get a discount.</p>';
+					}else{
+						echo '<p>You don\'t get a discount</p>';
 					}
 				?>
 				
 				<h3>Not <code>!</code></h3>
 				<?php
-					// your code here
+					$ownDog = true;
+
+						if (!$ownDog) {
+							echo 'You do not own a dog';
+						}else{
+							echo 'You own a dog!';
+						}
 				?>
 				
 				<h3>And <code>&amp;&amp;</code></h3>
 				<?php
-					// your code here
+					if ($username == 'Bastiaan' && $password = 'Bitter') {
+						echo 'Login is correct.';
+					}else{
+						echo 'Wrong info!';
+					}
 				?>
 				
 				<h3>Or <code>||</code></h3>
 				<?php
-
+					if ($cartTotal > 15 || $couponCode == 'DiscountPlease') {
+						echo 'You get a discount!';
+					}else{
+						echo 'You don\'t get a discount.';
+					}
 				?>
 				
 			</div><!-- end sandbox -->

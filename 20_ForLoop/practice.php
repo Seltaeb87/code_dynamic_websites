@@ -4,7 +4,7 @@
 	define("TITLE", "For Loop");
 	
 	// Custom Variables
-	$myName	= "Brad Hussey";
+	$myName	= "Bastiaan Bitter";
 	$lessonNum	= 20;
 
 ?>
@@ -30,7 +30,9 @@
 				
 				<?php
 				 
-				    // your code here
+				    for ($i=10; $i <= 20 ; $i++) { 
+				    	echo 'Number: ' . $i . '<br />';
+				    }
 				 
 				?>
 				

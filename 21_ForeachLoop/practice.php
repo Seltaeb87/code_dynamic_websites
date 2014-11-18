@@ -4,7 +4,7 @@
 	define("TITLE", "Foreach Loop");
 	
 	// Custom Variables
-	$myName	= "Brad Hussey";
+	$myName	= "Bastiaan";
 	$lessonNum	= 21;
 
 ?>
@@ -30,8 +30,12 @@
 				
 				<?php
 				 
-				    // your code here
-				 
+					$moustaches = array('Handlebar','Salvador Dali','Fu Manchu');
+
+					foreach ($moustaches as $snor) {
+						echo 'I love the ' . $snor . '<br />';
+					}
+
 				?>
 				
 			</div><!-- end sandbox -->

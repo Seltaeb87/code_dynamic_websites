@@ -4,7 +4,7 @@
 	define("TITLE", "Intro to Functions");
 	
 	// Custom Variables
-	$myName	= "Brad Hussey";
+	$myName	= "Bastiaan";
 	$lessonNum	= 23;
 	
 ?>
@@ -31,28 +31,43 @@
 				<h3>Using <code>sort()</code></h3>
 				<?php
 					
-					// your code here
+					$dinner = array('Rice', 'Meat', 'Beans');
+					sort($dinner);
+
+					foreach ($dinner as $ingredient) {
+						echo $ingredient . "<br />";
+					}
 					
 				?>
 				
 				<h3>Using <code>rsort()</code></h3>
 				<?php
 					
-					// your code here
+					rsort($dinner);
+
+					foreach ($dinner as $ingredient) {
+						echo $ingredient . "<br />";
+					}
 					
 				?>
 				
 				<h3>Using <code>strtolower()</code></h3>
 				<?php
 					
-					// your code here
+					$text = "Twinkle twinkle LITTLE StAr";
+					 $text = strtolower($text);
+
+					 echo $text;
 					
 				?>
 				
 				<h3>Using <code>sha1()</code></h3>
 				<?php
 					
-					// your code here
+					$myPassword =  'Bastiaan';
+
+						echo '<b>Before: </b>' . $myPassword . '<br />';
+						echo '<b>With sha1 protection: </b>' . sha1($myPassword);
 					
 				?>
 				

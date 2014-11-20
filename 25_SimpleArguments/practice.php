@@ -4,7 +4,7 @@
 	define("TITLE", "Simple Arguments");
 	
 	// Custom Variables
-	$myName	= "Brad Hussey";
+	$myName	= "Bastiaan";
 	$lessonNum	= 25;
 
 ?>
@@ -31,15 +31,39 @@
 				<h3>One Argument</h3>
 				<?php
 					
-					// your code here
+					function name($lastname){
+							echo 'Hi, my name is Bastiaan ' . $lastname . '<br />';
+					}
 					
+					name('Bitter');
+					name('Hilversum');
+					name('Boot');
 				?>
 				
 				<h3>Two Arguments</h3>
 				<?php
 				
-					// your code here
+					function moreArguments($firstName, $lastName){
+						echo 'This is my first name: ' . $firstName . '<br />';
+						echo 'And this is my lastname: ' . $lastName;
+						
+					}
+
+					//instead of typing my name, I grapped the variable $myName at the top. And it works!
+					moreArguments($myName,  'Bitter');
 				
+				?>
+
+				<h3>Three arguments</h3>
+				<?php
+
+					// This is an extra function I came up with, just for practicing
+					function mathTimesThree($val1, $val2, $val3){
+
+						echo $val1 * $val2 - $val3;
+					}
+						// result is 15
+						mathTimesThree(10, 2, 5);
 				?>
 				
 			</div><!-- end sandbox -->

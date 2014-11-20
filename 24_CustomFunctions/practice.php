@@ -4,7 +4,7 @@
 	define("TITLE", "Custom Functions");
 	
 	// Custom Variables
-	$myName	= "Brad Hussey";
+	$myName	= "Bastiaan";
 	$lessonNum	= 24;
 
 ?>
@@ -30,7 +30,13 @@
 				
 				<?php
 					
-					// your code here
+					//first custom function
+					function firstFunction(){
+						echo "This is my first custom function (not really..)!";
+					}
+
+					//call the function
+					firstFunction();
 					
 				?>
 				

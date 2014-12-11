@@ -24,11 +24,13 @@
 					<em>Zondag - Maandag</em><br>
 					Closed<br><br>
 
+					<?php include('includes/store-hours.php') ?>
+
 				</div><!-- column last-->
 
 			</div><!-- footer -->
 
-			<small>&copy; 2014 Bastiaan</small>
+			<small>&copy; <?php echo date('Y'); ?> <?php echo $companyName ?></small>
 
 		</div><!-- content -->
 

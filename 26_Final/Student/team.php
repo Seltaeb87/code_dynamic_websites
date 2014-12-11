@@ -1,12 +1,10 @@
 <?php
-	define('TITLE', 'Franklins Fine Dining');
+	define('TITLE', 'Team | Franklins Fine Dining');
 	include('includes/header.php');
 ?>
 
-	<div id='philosophy'>
-		<hr>
-
-			<h1>Franklin's Philosophy of Fine Dining</h1>
+	<div id='team-members' class='cf'>
+		<h1>Team at Franlin's</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 				Pellentesque vitae purus vel diam scelerisque bibendum 
 				vel quis arcu. Quisque maximus felis dui, nec imperdiet 
@@ -19,10 +17,29 @@
 				 volutpat. Nulla imperdiet enim est, sed dapibus est 
 				 efficitur et. Aliquam erat volutpat.
 			</p>
-			<p>Oh, and you call us Frankie's</p>
-		</hr>
-	</div><!-- philosophy -->
+
+			<hr>
+
+			<?php
+
+				foreach ($teamMembers as $member) {
+
+			?>
+
+				<div class='member'>
+					<img src="img/<?php echo $member[img]; ?> alt="<?php echo $member[name]; ?>">
+					<h2><?php echo $member[name]; ?></h2>
+					<p><?php echo $member[bio]; ?></p>
+				</div><!-- member -->
+
+
+			<?php
+				}
+			?>
+	</div>
 
 <?php
+
 	include('includes/footer.php');
+
 ?>

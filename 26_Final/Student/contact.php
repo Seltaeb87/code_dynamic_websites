@@ -28,14 +28,43 @@ include('includes/header.php');
 				}
 
 					if (!$name || !$email || $msg) {
-						echo '<h4 class="error">All fiels required.</h4><a href="contact.php class="button block>Go back and try again</a>'
-					}	exit;
+						echo '<h4 class="error">All fiels required.</h4><a href="contact.php class="button block>Go back and try again</a>';
+						exit;
+					}
 
+					//aad the recipient email to a variable
+					$to = "bastiaan_Bitter@hotmail.com";
+					$subject = "$name sent you a message";
+					$message = "Name: $name\r\n";
+					$message .= "Email: $email \r\n";
+					$message .= "Message:\r\n$msg";
 
+					//if the subscribe checkbox was checked
+					if (isset($_POST['subscribe']) && $_POST['subscribe'] == 'Subscribe') {
+						//add a new line to the message varibale
+						$message .= "\r\n\r\nPlease add your $email to the mailing list\r\n";
+					}
 
-			}
+					$message = wordwrap($message, 72);
+
+					//set the mail headers
+					$headers = "MIME-Version: 1.0\r\n";
+					$headers .= "Content-Type: text/plain; charset=iso-8859-1\r\n";
+					$headers .= "From: $name <$email>\r\n";
+					$headers .= "X-Priority: 1\r\n";
+					$headers .= "X-MSMail-Priority: High\r\n\r\n";
+
+					//send the email
+					mail($to, $subject, $message, $headers);
 
 		 ?>
+
+		 <!-- Show succes message after email has sent -->
+		 <h5>Thanks for contacting Franklin's</h5>
+		 <p>Please allow 24H for response</p>
+		 <p><a href="/final" class="button block">&laquo; Go to homepage</a></p>
+
+		 <?php }else{   ?>
 
 			<form method ="post" action="" id="contact-form">
 
@@ -54,6 +83,10 @@ include('includes/header.php');
 				<input type="submit" class="button next" name="contact_submit" value="Send message">
 
 			</form>
+
+			<?php } ?>
+
+			<hr>
 	</div><!-- contact -->
 
 
